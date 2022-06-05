@@ -5,7 +5,7 @@ public class HelloNative {
         System.loadLibrary("HelloNative");
     }
 
-    public static native void sayHello();我
+    public static native void sayHello();
 
     @SuppressWarnings("static-access")
     public static void main(String[] args) {
