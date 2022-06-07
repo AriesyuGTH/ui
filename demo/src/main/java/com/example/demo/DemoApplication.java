@@ -14,7 +14,7 @@ public class DemoApplication {
 
 	static Logger logger = LoggerFactory.getLogger(DemoApplication.class);
 
-	@Bean
+	// @Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
 		return args -> {
 			System.out.println("Let's inspect the beans provided by Spring Boot:");
