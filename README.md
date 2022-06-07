@@ -1,6 +1,5 @@
-# ui
-## 
-嗨
+### 嗨
+
 這是一個嘗試用的專案，目的是藉由教學 [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)，
 成功建立一個Oauth client。
 可以的話，我會盡量把每個步驟遇到的問題以及解答列在這裡，
