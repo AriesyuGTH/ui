@@ -17,8 +17,17 @@
 <body>
     <h1>Demo</h1>
     <div class="container unauthenticated">
-        With GitHub: <a href="/oauth2/authorization/github">click here</a>
+        <div>
+            With GitHub: <a href="/oauth2/authorization/github">click here</a>
+        </div>
+        <div>
+            With Google: <a href="/oauth2/authorization/google">click here</a>
+        </div>
+        <div>
+            With Pbs: <a href="/oauth2/authorization/pbs">click here</a>
+        </div>
     </div>
+
     <div class="container authenticated">
         Logged in as: <span id="user"></span>
         <div>
@@ -32,19 +41,19 @@
         $(".unauthenticated").hide()
         $(".authenticated").show()
     });
-    $.ajaxSetup({
-        beforeSend: function (xhr, settings) {
-            if (settings.type == 'POST' || settings.type == 'PUT'
-                || settings.type == 'DELETE') {
-                if (!(/^http:.*/.test(settings.url) || /^https:.*/
-                    .test(settings.url))) {
-                    // Only send the token to relative URLs i.e. locally.
-                    xhr.setRequestHeader("X-XSRF-TOKEN",
-                        Cookies.get('XSRF-TOKEN'));
-                }
-            }
-        }
-    });
+    // $.ajaxSetup({
+    //     beforeSend: function (xhr, settings) {
+    //         if (settings.type == 'POST' || settings.type == 'PUT'
+    //             || settings.type == 'DELETE') {
+    //             if (!(/^http:.*/.test(settings.url) || /^https:.*/
+    //                 .test(settings.url))) {
+    //                 // Only send the token to relative URLs i.e. locally.
+    //                 xhr.setRequestHeader("X-XSRF-TOKEN",
+    //                     Cookies.get('XSRF-TOKEN'));
+    //             }
+    //         }
+    //     }
+    // });
     var logout = function () {
         $.post("/logout", function () {
             $("#user").html('');

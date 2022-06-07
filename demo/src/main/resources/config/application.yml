@@ -6,3 +6,6 @@ spring:
           github:
             clientId: b50f1a2bf17e9bd183c2 # you'll get this after regster new Oauth 2 app on the GitHub( in using git hub situation)
             clientSecret: 6e2cc2b2e97ba389af9e16b573945285d110423f # as above
+          google:
+            client-id: google-client-id
+            client-secret: google-client-secret
