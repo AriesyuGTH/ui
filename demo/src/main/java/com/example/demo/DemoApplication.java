@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootApplication
+// @SpringBootApplication
 public class DemoApplication {
 
 	static Logger logger = LoggerFactory.getLogger(DemoApplication.class);
@@ -29,7 +29,6 @@ public class DemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-		logger.info("Logging 測試");
 
 	}
 
