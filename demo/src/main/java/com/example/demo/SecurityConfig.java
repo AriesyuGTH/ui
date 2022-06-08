@@ -34,9 +34,8 @@ public class SecurityConfig {
         return (web) -> web.ignoring().antMatchers("/webjars/**");
     }
 
-    // @formatter:off
-	@Bean
-	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    @Bean
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         // @formatter:off
         http
             .authorizeRequests(a -> a
